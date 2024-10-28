@@ -1,6 +1,7 @@
+import java.util.Scanner;
 
-
-public class QuestionService {
+public class QuestionService 
+{
 
     Question[] questions = new Question[5];
     String[] selection = new String[5];
@@ -12,5 +13,26 @@ public class QuestionService {
         questions[3] = new Question(4, "size of long", "2", "6", "4", "8", "8");
         questions[4] = new Question(5, "size of boolean", "1", "2", "4", "8", "1");
     }
-    
+
+    public void displayQuestions()
+    {
+        int i=0;
+        for(Question q : questions)
+        {
+            System.err.println("Question no. " + q.getId());
+            System.err.println("Actual Question " + q.getQuestion());
+            System.err.println(q.getOpt1());
+            System.err.println(q.getOpt2());
+            System.err.println(q.getOpt3());
+            System.err.println(q.getOpt4());
+            Scanner sc = new Scanner(System.in);
+            selection[i] = sc.nextLine();
+            i++;
+        }
+            
+        for(String s : selection)
+        {
+            System.err.println(s);
+        }
+    }
 }

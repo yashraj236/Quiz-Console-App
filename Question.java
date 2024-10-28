@@ -74,9 +74,9 @@ public class Question {
         this.answer = answer;
     }
 
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Question{" +
                 "id=" + id +
                 ", question='" + question + '\'' +
@@ -88,5 +88,3 @@ public class Question {
                 '}';
     }
 }
-
-
